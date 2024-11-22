@@ -1,0 +1,502 @@
+/* ESTILO GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: var(--branco);
+    height: 100vh;
+}
+.interface{
+    max-height: 1280px;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+}
+
+
+.btn-dark-mode-toggle{  
+    height: 45px;
+    width: 50px;
+    border: none;
+    border-radius: 60%;
+    background-color: var(--cinza-escuro);
+    padding: 12px;
+    cursor: pointer;
+}
+
+.btn-dark-mode-toggle:hover{
+    background-color: var(--cinza-opaco);
+    transition: .2s;
+}
+
+svg{
+    color:var(--branco);
+    width: 15px;
+    height: 15px;
+;
+}
+
+
+.btn-carrinho button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600px ;
+    color: var(--preto);
+    background-color: var(--verde-carrinho);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600px ;
+    color: var(--preto);
+    background-color: var(--verde-carrinho);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+h2.titulo{
+    color: var(--azul-escuro);
+    font-size: 38px;
+    text-align: center;
+}
+h2.titulo span{
+    color: var(--azul-celeste);
+}
+
+button:hover{
+    box-shadow: 0px 0px 8px var(--azul-opaco);
+    transform: scale(1.05);
+}
+/* modo dark e modo white*/
+:root{
+    --preto: #000000;
+    --azul-marinho: #002f99;
+    --azul-escuro: #0a1e33;
+    --azul-celeste: #0041f2;
+    --azul-opaco: #5b85fa71;
+    --amarelo-limao: #bfeb30;
+    --branco: #ffffff;
+    --cinza-claro: #dddddd;
+    --cinza-medio: #e6e6e6;
+    --cinza-opaco: #696868;
+    --cinza-escuro: #333333;
+    --preto-sombra: #05050541;
+    --verde-limão:#07a707;
+    --verde-escuro:#28a745;
+    --verde-brilhante: #08ec26;
+    --vermelho-vibrante:#a70707;
+    --sombra-escuro: #0000001a;
+    --sombra-medio: #00000080;
+    --sombra-claro: #0000004d;
+    --verde-carrinho:#bfeb30;
+}
+
+[data-theme="dark"]{
+--preto: #ffffff;
+--azul-marinho: #66d9ef;
+--azul-escuro: #337ab7;
+--azul-celeste: #8bc34a;
+--azul-opaco: #4d8aea71;
+--amarelo-limão: #ffd700;
+--branco: #000000;
+--cinza-claro: #333333;
+--cinza-medio: #444444;
+--cinza-opaco: #cccccc;
+--cinza-escuro: #838282;
+--preto-sombra: #05050541;
+--verde-limão: #2ecc71;
+--verde-escuro: #1a8d5f;
+--verde-brilhante: #32cd32;
+--vermelho-vibrante: #ff3737;
+--sombra-escuro: #0000004d;
+--sombra-medio: #00000080;
+--sombra-claro: #0000001a;
+--verde-carrinho:#ff6600;
+}
+
+/* ESTILO DO CABEÇALHO*/
+
+header{
+    padding: 40px 4%;
+}
+
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header a{
+    color: var(--azul-celeste);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+header a:hover{
+    color: var(--azul-celeste);
+    transform: scale(1.05);
+}
+header nav ul{
+    list-style-type: none;
+
+}
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+
+/* ESTILO TOPO DO SITE*/
+
+section.topo-do-site{
+    padding: 40px 4%;
+
+}
+
+section.top-do-site .flex{
+align-items: center;
+justify-content: center;
+gap: 90px;
+}
+
+.topo-do-site h1{
+    color: var(--azul-escuro);
+    font-size: 42px;
+    line-height: 40px;
+}
+.topo-do-site .txt-topo-site h1 span{
+    color: var(--azul-celeste);
+}
+.topo-do-site .txt-topo-site p{
+    color: var(--azul-escuro);
+    margin: 20px 0;
+}
+
+.topo-do-site .img-topo-site{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+
+}
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+/* ESTILO DAS ESPECIALIDADES*/
+section.especialidades{
+    padding: 40px 4%;
+}
+section.especialidades.flex{
+    gap: 60px;
+}
+.especialidades .especialidades-box{
+    color: var(--preto);
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid var(--cinza-claro);
+    margin-top: 45px;
+    transition: .2s;
+}
+
+.especialidades .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px var(--preto-sombra);
+}
+.especialidades .especialidades-box i{
+    font-size: 70px;
+    color: var(--azul-celeste);
+}
+.especialidades .especialidades-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/* ESTILO DAS PRODUTOS*/
+.products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product{
+    background: var(--cinza-claro);
+    border-radius: 30px;
+    box-shadow: 0 4px 8px var(--sombra-escuro);
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 250px;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.product:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px var(--preto-sombra);
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.product h2 {
+    font-size: 30PX;
+    margin: 10px 0;
+    color: var(--preto);
+}
+
+.price {
+    font-size: 20px;
+    color: var(--verde-escuro);
+    margin-bottom: 10px;
+}
+
+button {
+    background: var(--verde-limão);
+    color: var(--cinza-medio);
+    border: none;
+    padding: 15px 40px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 15px;
+}
+
+
+
+/* Sobre NextAge*/
+.sobre-nos {
+    padding: 50px 50px;
+}
+
+.sobre-nos .titulo {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sobre-nos .flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.texto-sobre-nos {
+    flex: 1;
+    max-width: 600px;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--azul-escuro);
+}
+
+.imagem-sobre-nos img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px var(--sombra-escuro);
+}
+
+/* Estilos para a aba do carrinho */
+#cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--sombra-medio);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#cart {
+    background: var(--branco);
+    width: 400px;
+    max-width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--sombra-claro);
+    position: relative;
+    background: var(--cinza-medio);
+}
+
+#cart h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+    color: var(--preto);
+}
+
+#cart ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+#cart ul li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--preto);
+}
+
+#cart button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+#checkout{
+    background:var(--verde-brilhante) ;
+    color: var(--preto);
+}
+
+#close-cart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--vermelho-vibrante);
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+#colse-cart.hidden{
+    display:none;
+}
+
+#cart-overlay.hidden {
+    display: none;
+}
+/* Esconde o carrinho inicialmente */
+#cart-overlay.hidden {
+    display: none;
+}
+
+
+/* Estilo das notificação e cadrastro */
+.Notificação{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    color: var(--branco);
+    text-align: center;
+    background: url(image/backgroaundcadrastro.png)no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+}
+
+
+.Notificação .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 40px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 40%;
+    background: transparent;
+    border: none;
+    outline: none; border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px ;
+    border-radius: 40px;
+    font-size: 16px;
+    color: var(--branco);
+    padding: 20px 20px 20px 20px;
+}
+
+.input-box input::placeholder{
+    color: var(--branco);
+}
+
+.input-box i{
+    position: absolute;
+    right: 2px;
+    top: 60%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: var(--branco);
+}
+
+.Notificação .box label{
+    margin: 40px 10px;
+    color: var(--branco);
+    text-align: center;
+}
+
+.Notificação .box input{
+    margin: 0px 10px;
+}
+.Notificação .box{
+    width: 100%;
+    height: 40%;
+    background: transparent;
+    border: none;
+    outline: none; border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px ;
+    border-radius: 40px;
+    font-size: 16px;
+    color: var(--branco);
+    padding: 20px 20px 20px 20px;
+    height: 20px;
+}
+
+
+.Notificação .btn-cadastrar button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600px ;
+    color: var(--preto);
+    background-color: var(--verde-carrinho);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+    margin: 40px;
+}
+
+.Notificação .btn-cadastrar button:hover{
+    box-shadow: 0px 0px 8px var(--branco);
+}
+/* estilo contato */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--cinza-escuro);
+    color: var(--branco)
+}
+
+.social-media a {
+    margin: 0 0.5rem;
+    color: var(--azul-celeste);
+    text-decoration: none;
+}
